@@ -11,7 +11,8 @@ body{
 
 .mainCalcDiv{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     height: 500px;
     width: 300px;
     border:  #00f7ff  4px solid;
@@ -44,4 +45,39 @@ body{
     font-size: xx-large;
     margin-top: 20px;
     margin-right: 10px;
+}
+
+.buttonDiv{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 330px;
+    border:  #00f7ff  2px solid;
+    margin-top: 30px;
+}
+
+.row{
+    display: flex;
+    flex: 1;
+}
+
+.calcButton{
+    flex: 1; /* Each item takes equal width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border:  #00f7ff  2px solid;
+}
+
+.numButton{
+    background-color: #6b21f2;
+}
+
+.operator{
+    background-color: #ff00c8;
+}
+
+.equalsButton{
+    background-color: #ff5400;
 }
