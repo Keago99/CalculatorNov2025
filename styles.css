@@ -6,6 +6,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Press Start 2P", system-ui;
 }
 
 .mainCalcDiv{
@@ -18,10 +19,29 @@ body{
 }
 
 .screen{
+    display: flex;
+    flex-direction: column;
     width: 250px;
     height: 80px;
     background-color: #0d0221;
     margin-top: 20px;
     border:  #00f7ff  4px solid;
     border-radius: 10px;
+}
+
+.subScreen{
+    text-align: start;
+    color: #ff5400;
+    font-size: xx-small;
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+.mainScreen{
+    color: #ff5400;
+    text-align: end;
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-right: 10px;
 }
