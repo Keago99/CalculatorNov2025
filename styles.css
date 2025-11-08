@@ -72,12 +72,15 @@ body{
 
 .numButton{
     background-color: #6b21f2;
+    color: white;
 }
 
 .operator{
     background-color: #ff00c8;
+    color: white;
 }
 
 .equalsButton{
     background-color: #ff5400;
+    color: white;
 }
