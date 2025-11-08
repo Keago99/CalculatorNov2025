@@ -3,4 +3,25 @@
 
 body{
     background-color: #2a0b49;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainCalcDiv{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 300px;
+    border:  #00f7ff  4px solid;
+    border-radius: 10px;
+}
+
+.screen{
+    width: 250px;
+    height: 80px;
+    background-color: #0d0221;
+    margin-top: 20px;
+    border:  #00f7ff  4px solid;
+    border-radius: 10px;
 }
