@@ -28,12 +28,32 @@ function addToMainScreen(event){
     console.log(currentContent.length);
     if (currentContent.length < 7){
         mainScreen.textContent +=  event.target.textContent;
+        updateSubScreen();
     }
     else{
         console.log("wrongs");
     }
 }
 
+function operateEvent(event){
+    let screenContent = mainScreen.textContent.trim();
+    if (!screenContent){
+        return;
+    }
+    let parsedContent = Number(screenContent);
+    numberArray.push(parsedContent);
+    operatorArray.push(event.target.textContent);
+    mainScreen.textContent = "";
+    updateSubScreen();
+    console.log(`number array is ${numberArray}`);
+    console.log(`operator array is ${operatorArray}`);
+}
+
 numButtons.forEach((number) => {
     number.addEventListener(`click`, addToMainScreen);
+
+});
+
+operators.forEach((operator) => {
+    operator.addEventListener(`click`, operateEvent);
 });
