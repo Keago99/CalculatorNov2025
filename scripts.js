@@ -8,27 +8,42 @@ const operators = document.querySelectorAll(".operator");
 
 numberArray = [];
 operatorArray = [];
+historyArray = [];
 
-function updateSubScreen(){
-    let displayString = ""
-    subScreen.textContent = "";
-    let i = 0;
-    while(i <numberArray.length){
-        displayString += numberArray[i];
-        if(operators[i]){
-            displayString += " " + operatorArray[i] + " ";
-        }
-        i++;
+function calculate(){
+    let sum = null;
+    switch (operatorArray[0]){
+        case "X":
+            sum = numberArray[0] * numberArray[1];
+            break;
+        
+        case "/":
+            sum = numberArray[0] / numberArray[1];
+            break;
+        
+        case "+":
+            sum = numberArray[0] + numberArray[1];
+            break;
+        
+        case "-":
+            sum = numberArray[0] - numberArray[1];
+            break;
     }
-    subScreen.textContent = displayString;
+    let historyEntry = `${numberArray[0]} ${operatorArray[0]} ${numberArray[1]} = ${sum}`;
+    historyArray.push(historyEntry);
+    numberArray.pop();
+    numberArray.pop();
+    operatorArray.pop();
+    mainScreen.textContent = sum;
+    subScreen.textContent = calculationHistory.join(" | ");
 }
+
 
 function addToMainScreen(event){
     let currentContent = mainScreen.textContent.trim();
     console.log(currentContent.length);
     if (currentContent.length < 7){
         mainScreen.textContent +=  event.target.textContent;
-        updateSubScreen();
     }
     else{
         console.log("wrongs");
@@ -44,7 +59,6 @@ function operateEvent(event){
     numberArray.push(parsedContent);
     operatorArray.push(event.target.textContent);
     mainScreen.textContent = "";
-    updateSubScreen();
     console.log(`number array is ${numberArray}`);
     console.log(`operator array is ${operatorArray}`);
 }
