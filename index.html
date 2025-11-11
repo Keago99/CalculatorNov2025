@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator 2025</title>
-    <link rel="stylesheet" href="styles.css"></rel>
+    <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="mainCalcDiv">
         <div class="screen">
             <div class="subScreen">
-                
+                <!-- Previous operations will go here -->
             </div>
             <div class="mainScreen">
+                <!-- Current input/result will go here -->
             </div>
         </div>
         <div class="buttonDiv">
+            <!-- Top row: C and CE spanning full width -->
+            <div class="row">
+                <div class="clearButton calcButton">C</div>
+                <div class="clearButton calcButton">CE</div>
+            </div>
+            
+            <!-- Middle rows: numbers on left, operators on right -->
             <div class="row">
                 <div class="numButton calcButton">7</div>
                 <div class="numButton calcButton">8</div>
@@ -38,11 +46,12 @@
                 <div class="numButton calcButton">3</div>
                 <div class="operator calcButton">-</div>
             </div>
+            
+            <!-- Bottom row: 0, ., and = spanning full width -->
             <div class="row">
-                <div class="numButton calcButton">0</div>
-                <div class="numButton calcButton">.</div>
-                <div class="equalsButton calcButton">=</div>
-                <div class="operator calcButton">+</div>
+                <div class="numButton calcButton wide">0</div>
+                <div class="numButton calcButton wide">.</div>
+                <div class="equalsButton calcButton wide">=</div>
             </div>
         </div>
     </div>

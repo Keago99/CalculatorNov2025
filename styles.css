@@ -68,6 +68,7 @@ body{
     justify-content: center;
     box-sizing: border-box;
     border:  #00f7ff  2px solid;
+    color: white;
 }
 
 .calcButton:hover{
@@ -77,15 +78,24 @@ body{
 
 .numButton{
     background-color: #6b21f2;
-    color: white;
 }
 
 .operator{
     background-color: #ff00c8;
-    color: white;
 }
 
 .equalsButton{
     background-color: #ff5400;
-    color: white;
+}
+
+.clearButton{
+    background-color: #ff4444;;   
+}
+
+.clearButton:hover {
+    background-color: #cc0000;
+}
+
+.clearButton:active {
+    background-color: #990000;
 }

@@ -34,12 +34,11 @@ function handleOperator(){
 function handleNumberInput(e){
     const clickedNumber = e.target.textContent;
     let mainScreenContent = mainScreen.textContent.trim();
-    if(mainScreenContent.length > 7){
+    if(mainScreenContent.length > 6){
         return;
     }
     else{
         updateMainScreen(clickedNumber);
-        console.log("it worked!");
     }
 }
 
