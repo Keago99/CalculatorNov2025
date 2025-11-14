@@ -34,7 +34,12 @@ function updateMainScreen(content){
     else{
         console.log("too many numbers on screen");
     }
+}
 
+function updateSubScreen(){
+    subScreen.textContent = "";
+    const historyString = historyArray.join(" ");
+    subScreen.textContent = historyString;
 }
 
 function clearButtonHandler(){
@@ -133,13 +138,14 @@ function calculate(){
             console.log(sum);
             break;
     }
-    const historyData = `${numberArray[0]} ${operatorArray[0]} ${numberArray[0]}`;
+    const historyData = `${numberArray[0]} ${operatorArray[0]} ${numberArray[1]}`;
     historyArray.push(historyData);
     numberArray.length = 0;
     operatorArray. length = 0;
     numberArray[0] = sum;
     mainScreen.textContent = "";
     updateMainScreen(sum);
+    updateSubScreen();
 }
 
 numButtons.forEach((button) => {
